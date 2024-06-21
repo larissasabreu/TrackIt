@@ -2,7 +2,8 @@ import styled from "styled-components";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
-import logo from './assets/logo2.png'
+import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
+
 
 export default function LoginScreen({ setToken, setDadosUsuario }) {
     const [email, setEmail] = useState('');
@@ -34,7 +35,7 @@ export default function LoginScreen({ setToken, setDadosUsuario }) {
     // renderiza a tela de login
     return (
         <Tela>
-            <Titulo> TrackIt </Titulo>
+            <Titulo> TrackIt <CalendarTodayIcon fontSize="50px"/> </Titulo>
 
             <Container>
             <EmailInput type="email" placeholder="email"
@@ -43,24 +44,24 @@ export default function LoginScreen({ setToken, setDadosUsuario }) {
             value={senha} onChange={e => setSenha(e.target.value)} />
             </Container>
 
-            <Enviar onClick={login}> Entrar </Enviar>
+            <Enviar onClick={login}> ENTRAR </Enviar>
             <Cadastro to='/cadastro'> Não tem uma conta? Cadastre-se! </Cadastro>
         </Tela>
     );
 }
 
 const Titulo = styled.div`
-    font-family: "Playball", cursive;
-    font-size: 80px;
-    color: #126BA5;
+    font-family: "Playwrite IE", cursive;
+    font-size: 60px;
+    color: 	#f9d62e;
+    margin-top: 20px;
 `
 // #126BA5;
 
 const Tela = styled.div`
-    background-color: #ffffff;
+    background-color: #232331 ;
     height: 100%;
     width: 100%;
-    margin-top: 20px;
     align-items: center;
     display: grid;
     justify-content: center;
@@ -77,18 +78,19 @@ const EmailInput = styled.input`
 const Enviar = styled(Link)`
     width: 303px;
     height: 45px;
-    background-color: #52B6FF;
-    border-color: #52B6FF;
+    background-color: 	#fc913a;
     color: white;
     border-radius: 5px;
     text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
     display: flex;
+    font-weight: bold;
     align-items: center;
     justify-content: center;
 `
 
 const Cadastro = styled(Link)`
-    color: #126BA5;
+    color: #52B6FF;
     text-decoration: none;
 `
 const Container = styled.div`

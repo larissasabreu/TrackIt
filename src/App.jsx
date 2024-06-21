@@ -1,5 +1,6 @@
 import './App.css'
 import './assets/reset.css';
+import './assets/bg.css';
 import styled from 'styled-components';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LoginScreen from './LoginScreen';
@@ -38,8 +39,8 @@ export default function App() {
 
 const Tela = styled.div`
   width: 100%;
-  height: 100vh;
-  background-color: white;
+  height: 100%;
+  background-color: #232331 ;
   display: flex;
   align-items: center;
   justify-content: center;

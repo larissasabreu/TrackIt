@@ -53,10 +53,9 @@ const SwitchHabitos = styled(Link)`
     justify-content: center;
     font-weight: 400;
     color: ${props => props.selecionado == false ?  '#D4D4D4;' : '#FFFFFF;' };
-    background-color: ${props => props.selecionado == false ?  '#FFFFFF;' : '#52B6FF;' };
+    background-color: ${props => props.selecionado == false ?  '#43435e;' : '#52B6FF;' };
     text-decoration: none;
     cursor: pointer;
-    border: 1px solid #D4D4D4;
 `
 
 const SwitchHoje = styled(Link)`
@@ -69,6 +68,5 @@ const SwitchHoje = styled(Link)`
     cursor: pointer;
     text-decoration: none;
     color: ${props => props.selecionado == false ?  '#D4D4D4;' : '#FFFFFF;' };
-    background-color: ${props => props.selecionado == false ?  '#FFFFFF;' : '#52B6FF;' };
-    border: 1px solid #D4D4D4;
+    background-color: ${props => props.selecionado == false ?  '#43435e;' : '#52B6FF;' };
 `

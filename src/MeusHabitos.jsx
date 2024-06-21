@@ -49,9 +49,7 @@ export default function MeusHabitos({ token }) {
         <Tela>
             <NavBar />
 
-            <Container> Meus hábitos <Add onClick={AddBox}> <AddBoxIcon fontSize='large'/> </Add> 
-            </Container>
-
+            <Container> Meus hábitos <Add onClick={AddBox}> <AddBoxIcon fontSize='large'/> </Add> </Container>
             <Caixa>
             {abrir && <AdicionandoHabito token={token} abrir={abrir} setAbrir={setAbrir}/>}
             </Caixa>
@@ -81,13 +79,13 @@ function Alerta (props) {
 
 function ListaHab (props) {
     const diasTexto = [
-        {nome: 'Dom'},
-        {nome: 'Seg'},
-        {nome: 'Ter'},
-        {nome: 'Qar'},
-        {nome: 'Qui'},
-        {nome: 'Sex'},
-        {nome: 'Sab'}
+        {nome: 'D'},
+        {nome: 'S'},
+        {nome: 'T'},
+        {nome: 'Q'},
+        {nome: 'Q'},
+        {nome: 'S'},
+        {nome: 'S'}
     ];
 
     // renderiza a caixa e manda o map dos dias
@@ -128,36 +126,39 @@ function Selecao (props) {
 const Tela = styled.div`
     height: 100%;
     width: 100%;
-    background-color: #f2f2f2;
+    background-color: #232331 ;
 `
 
 const Container = styled.div`
-    margin-top: 80px;
-    color: #126BA5;
-    font-size: 30px;
-    font-weight: 400;
-    line-height: 28.72px;
+    margin-top: 90px;
+    margin-bottom: 30px;
+    color: #52B6FF;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    gap: 10px;
     display: flex;
     justify-content: center;
+    align-items: center;
 `
 
 const Add = styled.div`
-    color: #126BA5;
+    color: #f9d62e;
     cursor: pointer;
-    font-size: 40px;
 `
 const Texto = styled.h1`
     font-weight: bold;
-    color: #666666;
+    margin-top: 10px;
+    color: white;
     margin-bottom: 20px;
     font-size: 20px;
 `
 const Habit = styled.div`
     width: 340px;
-    height: 94px;
-    border: 1px solid #E7E7E7;
+    height: 100px;
+    border: 2px solid #030304;
     border-radius: 5px;
-    background-color: white;
+    background-color: #38384f;
     gap: 20px;
     align-items: center;
     flex-wrap: wrap;
@@ -176,7 +177,7 @@ const DiaSelecionado = styled.div`
     width: 30px;
     height: 30px;
     border: 1px solid #D4D4D4;
-    background-color: ${props => props.selecionado == true ? '#D4D4D4' : ' #FFFFFF'};
+    background-color: ${props => props.selecionado == true ? '#52B6FF' : '#232331'};
     border-radius: 5px;
     display: flex;
     justify-content: center;

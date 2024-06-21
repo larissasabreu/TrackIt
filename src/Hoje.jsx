@@ -117,7 +117,7 @@ function Listagem(props) {
 const Tela = styled.div`
     height: 100vh;
     width: 100vw;
-    background-color: #f2f2f2;
+    background-color: #232331 ;
     display: grid;
     flex-wrap: wrap;
     justify-content: center;
@@ -125,26 +125,30 @@ const Tela = styled.div`
 
 const Container = styled.div`
     margin-top: 90px;
-    color: #126BA5;
-    font-size: 30px;
+    color: #52B6FF;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: 400;
-    line-height: 28.72px;
 `
 const Habitos = styled.div`
     width: 340px;
     height: 94px;
+    color: white;
     margin-top: 20px;
     border: 1px solid #E7E7E7;
     border-radius: 5px;
-    background-color: white;
+    background-color: #38384f;
     display: flex;
     gap: 50px;
     align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
     justify-content: center;
 `
 
 const Titulo = styled.h1`
     font-weight: bold;
+    margin-bottom: 10px;
 `
 
 const Descricao = styled.h2`
@@ -152,6 +156,6 @@ const Descricao = styled.h2`
 `
 
 const Checkmark = styled.div`
-    color: ${props => props.selecionado == false ? '#D4D4D4;' :  'limegreen;'};
+    color: ${props => props.selecionado == false ? '#D4D4D4;' :  '#f9d62e'};
     cursor: pointer;
 `

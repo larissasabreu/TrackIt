@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import axios from "axios";
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 
 export default function SignUpScreen() {
     const [email, setEmail] = useState('');
@@ -23,7 +24,7 @@ export default function SignUpScreen() {
         axios.post('https://mock-api.bootcamp.respondeai.com.br/api/v2/trackit/auth/sign-up', req)
         .then(() => navigate("/"))
         .catch(err => {
-            alert('Usuario já cadastrado ou email invalido!')
+            alert('Usuario já cadastrado ou dados invalidos!')
             console.log(err.response.data)})
     }
 
@@ -31,7 +32,7 @@ export default function SignUpScreen() {
     return (
 
     <Container>
-        <Titulo> TrackIt </Titulo>
+        <Titulo> TrackIt <CalendarMonthIcon fontSize="50px"/> </Titulo>
 
         <Form>
         <Inputs type="email" placeholder="email"
@@ -40,11 +41,12 @@ export default function SignUpScreen() {
         value={senha} onChange={e => setSenha(e.target.value)} />
         <Inputs type="text" placeholder="nome"
         value={nome} onChange={e => setNome(e.target.value)} />
+        <Mensagem> Use uma URL para sua imagem de perfil! </Mensagem>
         <Inputs type="url" placeholder="foto"
         value={imagem} onChange={e => setImagem(e.target.value)} />
         </Form>
 
-        <Enviar onClick={Cadastro}> Entrar </Enviar>
+        <Enviar onClick={Cadastro}> CADASTRAR </Enviar>
 
         <Login to={'/'}> Já tem uma conta? Faça login! </Login>
     </Container>
@@ -52,16 +54,25 @@ export default function SignUpScreen() {
 }
 
 const Titulo = styled.div`
-    font-family: "Playball", cursive;
-    font-size: 80px;
+    font-family: "Playwrite IE", cursive;
+    font-size: 60px;
+    color: 	#f9d62e;
+    margin-top: 20px;
+`
+
+const Mensagem = styled.p`
     color: #126BA5;
+    margin-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
 `
 
 const Container = styled.div`
-    background-color: #ffffff;
-    margin-top: 20px;
+    background-color: #232331 ;
+    height: 100%;
+    width: 100%;
     align-items: center;
-    display: block;
+    display: grid;
     justify-content: center;
     flex-wrap: wrap;
     Gap: 30px;
@@ -77,23 +88,21 @@ const Inputs = styled.input`
 const Enviar = styled.div`
     width: 303px;
     height: 45px;
-    margin-top: 30px;
-    margin-bottom: 20px;
     background-color: #52B6FF;
-    border-color: #52B6FF;
+    font-weight: bold;
     color: white;
     border-radius: 5px;
     text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
     display: flex;
-    justify-content: center;
     align-items: center;
-    cursor: pointer;
+    justify-content: center;
 `
 
 const Form = styled.div`
     display: grid;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 2px;
 `
 
 const Login = styled(Link)`

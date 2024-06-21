@@ -7,13 +7,13 @@ export default function AdicionandoHabito(props) {
     const [nome, setNome] = useState('');
     const token = props.token;
     const diasTexto = [
-        {nome: 'Dom'},
-        {nome: 'Seg'},
-        {nome: 'Ter'},
-        {nome: 'Qar'},
-        {nome: 'Qui'},
-        {nome: 'Sex'},
-        {nome: 'Sab'}
+        {nome: 'D'},
+        {nome: 'S'},
+        {nome: 'T'},
+        {nome: 'Q'},
+        {nome: 'Q'},
+        {nome: 'S'},
+        {nome: 'S'}
     ];
 
     const req = {
@@ -90,7 +90,7 @@ function EscolhaDias (props) {
 const AdicionarHabito = styled.div`
     width: 340px;
     height: 180px;
-    background-color: white;
+    background-color: #58587c;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -135,13 +135,14 @@ const Dia = styled.div`
     width: 30px;
     height: 30px;
     border: 1px solid #D4D4D4;
-    background-color: ${props => props.selecionado == false ? '#FFFFFF;' :  '#D4D4D4;'};
+    background-color: ${props => props.selecionado == false ? '#38384f;' :  ' #f9d62e;'};
     border-radius: 5px;
     display: flex;
+    font-weight: bold;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    color: ${props => props.selecionado == false ? '#D4D4D4;' : '#FFFFFF;' };
+    color: ${props => props.selecionado == false ? '#D4D4D4;' : 'black;' };
 `
 const Cancelar = styled.p`   
     color: #52B6FF;
