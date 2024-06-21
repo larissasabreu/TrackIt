@@ -7,13 +7,13 @@ export default function AdicionandoHabito(props) {
     const [nome, setNome] = useState('');
     const token = props.token;
     const diasTexto = [
-        {nome: 'D'},
-        {nome: 'S'},
-        {nome: 'T'},
-        {nome: 'Q'},
-        {nome: 'Q'},
-        {nome: 'S'},
-        {nome: 'S'}
+        {nome: 'Dom'},
+        {nome: 'Seg'},
+        {nome: 'Ter'},
+        {nome: 'Qui'},
+        {nome: 'Qua'},
+        {nome: 'Sex'},
+        {nome: 'Sab'}
     ];
 
     const req = {

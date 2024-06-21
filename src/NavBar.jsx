@@ -33,7 +33,7 @@ const Header = styled.div`
     top: 0;
     width: 100%;
     height: 70px;
-    background-color: #304280;
+    background-color: #304280;''
     color: #f9d62e;
 `
 const Imagem = styled.img`

@@ -79,13 +79,13 @@ function Alerta (props) {
 
 function ListaHab (props) {
     const diasTexto = [
-        {nome: 'D'},
-        {nome: 'S'},
-        {nome: 'T'},
-        {nome: 'Q'},
-        {nome: 'Q'},
-        {nome: 'S'},
-        {nome: 'S'}
+        {nome: 'Dom'},
+        {nome: 'Seg'},
+        {nome: 'Ter'},
+        {nome: 'Qui'},
+        {nome: 'Qua'},
+        {nome: 'Sex'},
+        {nome: 'Sab'}
     ];
 
     // renderiza a caixa e manda o map dos dias
